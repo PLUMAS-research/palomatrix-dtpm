@@ -26,7 +26,7 @@ consolidado = ["dask[dataframe]>=2024.1"]
 diagnosticos = ["matplotlib>=3.8"]
 
 [project.urls]
-Repository = "https://github.com/zorzalerrante/palomatrix"
+Repository = "https://github.com/PLUMAS-research/palomatrix-dtpm"
 
 [build-system]
 requires = ["hatchling"]
