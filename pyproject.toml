@@ -1,12 +1,12 @@
 [project]
 name = "palomatrix"
 version = "0.1.0"
-description = "Ingesta y normalización de datos abiertos de transporte público de Santiago (DTPM)"
+description = "Ingesta y normalización de datos abiertos de movilidad de Santiago (DTPM y EOD 2012)"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "Eduardo Graells-Garrido" }]
-keywords = ["transporte", "movilidad", "santiago", "dtpm", "gtfs", "bip"]
+keywords = ["transporte", "movilidad", "santiago", "dtpm", "gtfs", "bip", "eod", "sectra"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",

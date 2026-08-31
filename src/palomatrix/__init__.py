@@ -1,19 +1,27 @@
-"""palomatrix: ingesta y normalización de datos abiertos del transporte de Santiago.
+"""palomatrix: datos abiertos de movilidad de Santiago.
 
-El DTPM publica las tablas de viajes y etapas del sistema Red, el catálogo de
-paradas y el GTFS, en formatos que han cambiado a lo largo de los años. Este
-paquete los lleva a un esquema único para poder analizar la serie completa.
+El paquete cubre dos fuentes. El DTPM publica las tablas de viajes y etapas del
+sistema Red, el catálogo de paradas y el GTFS, en formatos que han cambiado a
+lo largo de los años, y `palomatrix` los lleva a un esquema único para analizar
+la serie completa. SECTRA publica la Encuesta Origen-Destino 2012, que está en
+el subpaquete `palomatrix.eod` y aporta los viajes que las tarjetas bip! no
+registran, con su propósito declarado.
+
+Las dos fuentes comparten la zonificación de 866 zonas EOD, que es la unidad
+espacial en la que se pueden comparar.
 
 Uso típico
 ----------
-    from palomatrix import leer_viajes, convertir_archivos
+    from palomatrix import leer_viajes, convertir_archivos, eod
 
     convertir_archivos(sorted(Path("crudos").glob("*.gz")), "salida/")
+    viajes_encuesta = eod.leer_viajes()
 
 El paquete no incluye datos personales ni de tarjetas identificadas: trabaja
-solo con los datos que el DTPM publica de forma abierta.
+solo con los datos que ambos organismos publican de forma abierta.
 """
 
+from . import eod
 from .consolidado import anio_a_parquet, consolidar_anio, descargar_anio
 from .descarga import (
     MAPEO_DTPM,
@@ -71,6 +79,7 @@ __all__ = [
     "detectar_encoding",
     "detectar_separador",
     "dias_faltantes",
+    "eod",
     "escanear_dias",
     "etapas_a_viajes",
     "extraer",
