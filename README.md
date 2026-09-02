@@ -13,10 +13,13 @@ en la que se pueden comparar.
 
 ## Instalación
 
+El paquete no está publicado en PyPI, así que se instala desde el repositorio
+con `uv`:
+
 ```bash
-pip install palomatrix                      # ingesta y normalización
-pip install "palomatrix[consolidado]"       # además, consolidación anual (dask)
-pip install "palomatrix[diagnosticos]"      # además, gráficos (matplotlib)
+uv add "palomatrix @ git+https://github.com/PLUMAS-research/palomatrix-dtpm"                      # ingesta y normalización
+uv add "palomatrix[consolidado] @ git+https://github.com/PLUMAS-research/palomatrix-dtpm"          # además, consolidación anual (dask)
+uv add "palomatrix[diagnosticos] @ git+https://github.com/PLUMAS-research/palomatrix-dtpm"         # además, gráficos (matplotlib)
 ```
 
 Para extraer los archivos comprimidos del DTPM se necesita `unrar` y `7z` en el
