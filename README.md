@@ -229,12 +229,6 @@ variación entre días ni el cambio de la ciudad desde entonces, y depende de lo
 que cada persona declara, con subreporte conocido de los viajes cortos, a pie y
 de cuidado.
 
-## Alcance
-
-El paquete trabaja solo con datos abiertos. Los atributos demográficos asociados
-a tarjetas identificadas quedan fuera, y su tratamiento corresponde a los
-proyectos que cuenten con la autorización correspondiente.
-
 ## Licencia
 
 El código está bajo licencia MIT.

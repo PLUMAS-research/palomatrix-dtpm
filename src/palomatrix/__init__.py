@@ -17,8 +17,8 @@ Uso típico
     convertir_archivos(sorted(Path("crudos").glob("*.gz")), "salida/")
     viajes_encuesta = eod.leer_viajes()
 
-El paquete no incluye datos personales ni de tarjetas identificadas: trabaja
-solo con los datos que ambos organismos publican de forma abierta.
+El paquete trabaja solo con los datos que ambos organismos publican de forma
+abierta.
 """
 
 from . import eod
