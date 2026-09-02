@@ -244,3 +244,8 @@ Origen-Destino de Santiago 2012, un dato público levantado por SECTRA
 (Ministerio de Transportes y Telecomunicaciones). El paquete los redistribuye
 convertidos a parquet, sin modificar su contenido. Los datos del DTPM no se
 redistribuyen: se descargan de su sitio con las funciones del paquete.
+
+## Financiamiento
+
+Este trabajo fue financiado por el proyecto LOICA, ANID Fondecyt Regular
+#1261835.
